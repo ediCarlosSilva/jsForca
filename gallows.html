@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/lacuna.css">
     <title>Jogo da Forca</title>
 </head>
+
 <body>
     <div class="jumbotron">
         <h2 class="text-center">Jogo da forca</h2>
@@ -16,16 +18,40 @@
 
         <!-- div com a classe sprite -->
         <div class="sprite"></div>
-        
+
         <ul class="lacunas text-center"></ul>
 
         <div class="text-center">
-        <input id="entrada" 
-            class="entrada"
-            placeholder="Palavra secreta" autofocus>
+            <input id="entrada" class="entrada" placeholder="Palavra secreta" autofocus>
         </div>
     </div>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/jogo.js"></script>
+    <script src="js/controller.js"></script>
+    <script>
+        // var jogo = criaJogo(createSprite('.sprite'));
+
+        // var sprite = createSprite('.sprite');
+        // var jogo = criaJogo(sprite);
+        // criaController(jogo);
+
+        // criaController(criaJogo(createSprite('.sprite'))).inicia();
+
+        criaController(
+            criaJogo(
+                createSprite('.sprite')
+            )
+        ).inicia();
+    </script>
+    <!-- <script>
+        var sprite = createSprite(".sprite");
+
+        // setInterval(function() {
+        //     sprite.nextFrame();
+        // }, 500);
+    </script> -->
 </body>
+
 </html>
